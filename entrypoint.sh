@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mkdocs build -c -f mkdocs.yaml -d build
+mkdocs build -c -f /docs/mkdocs.yaml -d build
