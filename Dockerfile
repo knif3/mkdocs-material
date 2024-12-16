@@ -2,4 +2,7 @@ FROM squidfunk/mkdocs-material
 
 RUN pip install mkdocs-exclude
 
-ENTRYPOINT ["mkdocs", "build", "-c", "-f mkdocs.yaml", "-d build"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
