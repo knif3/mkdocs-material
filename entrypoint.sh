@@ -1,3 +1,6 @@
 #!/bin/sh
 
-mkdocs build -c -f /docs/mkdocs.yaml -d build
+set -eu
+cd "$INPUT_WORKDIR"
+
+sh -c "mkdocs build -c --config-file $INPUT_CONFIG_FILE --site-dir $INPUT_OUTPUT_DIR"

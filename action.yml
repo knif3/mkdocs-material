@@ -1,0 +1,21 @@
+name: 'MkDocs Build'
+description: 'Build your MkDocs projects'
+inputs:
+  config_file:
+    description: 'The path to the MkDocs configuration file'
+    required: false
+    default: 'mkdocs.yaml'
+  output_dir:
+    description: 'The directory to output the HTML site to, relative to workdir'
+    required: false
+    default: 'build'
+  workdir:
+    description: 'The root directory of your project (which contains the `docs` dir)'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'book'
+  color: 'blue'
