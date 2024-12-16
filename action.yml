@@ -9,10 +9,6 @@ inputs:
     description: 'The directory to output the HTML site to, relative to workdir'
     required: false
     default: '/tmp/build'
-  workdir:
-    description: 'The root directory of your project (which contains the `docs` dir)'
-    required: false
-    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
