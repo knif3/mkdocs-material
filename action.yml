@@ -8,7 +8,7 @@ inputs:
   output_dir:
     description: 'The directory to output the HTML site to, relative to workdir'
     required: false
-    default: '/tmp/build'
+    default: '.build'
 runs:
   using: 'docker'
   image: 'Dockerfile'
